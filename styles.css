@@ -5,12 +5,14 @@
 }
 
 :root {
-  --bg: #f6f1e8;
-  --paper: #fffaf2;
-  --text: #141414;
-  --muted: #6b6259;
-  --dark: #111;
-  --accent: #9b6b43;
+  --bg: #f9f5f0;
+  --paper: #ffffff;
+  --text: #211712;
+  --muted: #8c7468;
+  --dark: #4b3327;
+  --accent: #428390;
+  --olive: #9c9715;
+  --pink: #ffcac4;
   --line: rgba(0, 0, 0, 0.12);
 }
 
@@ -137,7 +139,7 @@ h3 {
 .visual {
   background:
     radial-gradient(circle at 30% 20%, rgba(255,255,255,0.8), transparent 20%),
-    linear-gradient(135deg, #161616, #81593b 45%, #e7d2b8);
+    linear-gradient(135deg, #4b3327, #428390 55%, #ffcac4);
   min-height: 540px;
   border-radius: 38px;
   box-shadow: 0 30px 90px rgba(0,0,0,0.18);
@@ -159,8 +161,8 @@ h3 {
   width: 82px;
   height: 82px;
   background:
-    linear-gradient(90deg, #111 10px, transparent 10px),
-    linear-gradient(#111 10px, transparent 10px);
+    linear-gradient(90deg, var(--dark) 10px, transparent 10px),
+    linear-gradient(var(--dark) 10px, transparent 10px);
   background-size: 22px 22px;
   border: 10px solid white;
   margin-bottom: 12px;
@@ -201,15 +203,15 @@ h3 {
 .art-image {
   height: 320px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #191919, #9b6b43, #ead8bf);
+  background: linear-gradient(135deg, #4b3327, #9c9715, #f9f5f0);
 }
 
 .art-image.two {
-  background: linear-gradient(135deg, #203240, #6e91a0, #f0e6da);
+  background: linear-gradient(135deg, #2c5860, #428390, #d8eef0);
 }
 
 .art-image.three {
-  background: linear-gradient(135deg, #eadfce, #b75d3a, #171717);
+  background: linear-gradient(135deg, #ffcac4, #428390, #4b3327);
 }
 
 .page-intro {
@@ -287,4 +289,62 @@ footer {
   .art-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Historie, pris og køb */
+
+.medium {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}
+
+.art-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.story-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.story-toggle:hover {
+  color: var(--accent);
+}
+
+.story {
+  display: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.story-open .story {
+  display: block;
+}
+
+.button.small {
+  padding: 9px 18px;
+  font-size: 0.85rem;
+}
+
+.buy-button {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
 }
